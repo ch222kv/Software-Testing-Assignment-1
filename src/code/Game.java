@@ -3,7 +3,7 @@ package code;
 public class Game {
 	private int sticks = 20;
 
-	public Object getSticksLeft() {
+	public int getSticksLeft() {
 		// TODO Auto-generated method stub
 		return sticks;
 	}

@@ -20,6 +20,8 @@ public class Test {
 			assertFalse(game.takeSticks(i));
 		}
 		assertFalse(game.hasEnded());
+		game.takeSticks(game.getSticksLeft());
+		assertTrue(game.hasEnded());
 	}
 
 }
