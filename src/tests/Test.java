@@ -19,6 +19,7 @@ public class Test {
 		for(int i = 20; i < 100; i++){
 			assertFalse(game.takeSticks(i));
 		}
+		assertFalse(game.hasEnded());
 	}
 
 }
