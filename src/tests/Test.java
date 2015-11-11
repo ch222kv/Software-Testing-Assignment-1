@@ -26,6 +26,7 @@ public class Test {
 		assertTrue(game.hasEnded());
 		
 		game.beginGame();
+		assertFalse(game.hasEnded());
 	}
 
 }
