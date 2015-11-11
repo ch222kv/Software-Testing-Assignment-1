@@ -9,7 +9,7 @@ public class Game {
 	}
 	
 	public boolean takeSticks(int i) {
-		if(i == 20){
+		if(i > sticks){
 			return false;
 		}
 		sticks -= i;
