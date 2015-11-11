@@ -8,6 +8,7 @@ public class Test {
 
 	@org.junit.Test
 	public void test() {
+		Game game = new Game();
 	}
 
 }
