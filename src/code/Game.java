@@ -25,7 +25,7 @@ public class Game {
 	}
 
 	public void beginGame() {
-		// TODO Auto-generated method stub
+		sticks = 20;
 		
 	}
 
