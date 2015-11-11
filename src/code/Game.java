@@ -18,7 +18,9 @@ public class Game {
 	}
 
 	public boolean hasEnded() {
-		// TODO Auto-generated method stub
+		if(sticks == 0){
+			return true;
+		}
 		return false;
 	}
 
