@@ -11,6 +11,7 @@ public class Test {
 		Game game = new Game();
 		
 		assertEquals(game.getSticksLeft(), 20);
+		assertTrue(game.takeSticks(1);
 	}
 
 }
