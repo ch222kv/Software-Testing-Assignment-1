@@ -13,6 +13,8 @@ public class Test {
 		assertEquals(game.getSticksLeft(), 20);
 		assertTrue(game.takeSticks(1));
 		assertEquals(game.getSticksLeft(), 19);
+		
+		//Can't take more sticks than there are left
 		assertFalse(game.takeSticks(20));
 		for(int i = 20; i < 100; i++){
 			assertFalse(game.takeSticks(i));
