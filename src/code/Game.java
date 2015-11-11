@@ -24,4 +24,9 @@ public class Game {
 		return false;
 	}
 
+	public void beginGame() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
