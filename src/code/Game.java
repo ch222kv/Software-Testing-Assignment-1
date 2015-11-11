@@ -17,4 +17,9 @@ public class Game {
 		return true;
 	}
 
+	public boolean hasEnded() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
