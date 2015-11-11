@@ -2,12 +2,14 @@ package tests;
 
 import static org.junit.Assert.*;
 
+import static org.mockito.Mockito.*;
+
 import code.*;
 
 public class Test {
 
 	@org.junit.Test
-	public void test() {
+	public void test() {		
 		Game game = new Game();
 		
 		assertEquals(game.getSticksLeft(), 20);
@@ -22,6 +24,8 @@ public class Test {
 		assertFalse(game.hasEnded());
 		game.takeSticks(game.getSticksLeft());
 		assertTrue(game.hasEnded());
+		
+		game.beginGame();
 	}
 
 }
