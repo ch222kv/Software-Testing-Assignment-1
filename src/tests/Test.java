@@ -82,9 +82,21 @@ public class Test {
 	}
 	@org.junit.Test
 	public void testSticksAfterResetSameAsBefore(){
-		Game game = new Game();
+		Game game = new Game(200);
 		int stickCount = game.getSticksLeft();
 		game.beginGame();
 		assertEquals(stickCount, game.getSticksLeft());
+	}
+	@org.junit.Test
+	public void testTakeSticksThrowsGameHasEndedExceptionOnGameEnd() throws GameHasNotBegunException{
+		Game game = new Game();
+		game.beginGame();
+		try{
+			game.takeSticks(game.getSticksLeft());
+			fail("Should throw GameHasEndedException");
+		} catch(GameHasEndedException e){
+			
+		}
+		
 	}
 }
