@@ -6,6 +6,7 @@ import tests.GameHasNotBegunException;
 
 public class Game {
 	private int sticks;
+	private int maxSticks;
 	private PrintStream outStream = null;
 	private boolean gameBegun = false;
 	
@@ -20,6 +21,7 @@ public class Game {
 	}
 	public Game(int stickCount, PrintStream outStream){
 		sticks = stickCount;
+		maxSticks = stickCount;
 		this.outStream = outStream;
 	}
 
@@ -49,7 +51,7 @@ public class Game {
 
 	public void beginGame() {
 		gameBegun = true;
-		sticks = 20;
+		sticks = maxSticks;
 		this.outStream.println("The game has begun!");
 	}
 
