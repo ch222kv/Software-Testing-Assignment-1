@@ -17,7 +17,7 @@ public class Test {
 		this.game.beginGame();
 	}
 	@org.junit.Test
-	public void testGetSticks() throws GameHasNotBegunException {
+	public void testGetSticks() throws GameHasNotBegunException, GameHasEndedException {
 		assertEquals(this.game.getSticksLeft(), 20);
 		assertTrue(this.game.takeSticks(1));
 		assertEquals(this.game.getSticksLeft(), 19);
@@ -32,7 +32,10 @@ public class Test {
 	@org.junit.Test
 	public void testGameHasEnded() throws GameHasNotBegunException{
 		assertFalse(this.game.hasEnded());
-		this.game.takeSticks(game.getSticksLeft());
+		try{
+			this.game.takeSticks(game.getSticksLeft());
+			fail("Should throw GameHasEndedException");
+		} catch(GameHasEndedException e){}
 		assertTrue(this.game.hasEnded());
 	}
 	@org.junit.Test
@@ -41,7 +44,10 @@ public class Test {
 		game.beginGame();
 		assertFalse(game.hasEnded());
 		
-		game.takeSticks(this.game.getSticksLeft());
+		try{
+			game.takeSticks(this.game.getSticksLeft());
+		} catch(GameHasEndedException e){}
+		
 		
 		assertTrue(game.hasEnded());
 	}
@@ -55,7 +61,7 @@ public class Test {
 		verify(out).println("The game has begun!");
 	}
 	@org.junit.Test
-	public void testNotTakeSticksBeforeGameBegin(){
+	public void testNotTakeSticksBeforeGameBegin() throws GameHasEndedException{
 		Game game = new Game();
 		try{
 			game.takeSticks(4);

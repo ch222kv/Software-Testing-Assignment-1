@@ -30,7 +30,7 @@ public class Game {
 		return currentSticks;
 	}
 	
-	public boolean takeSticks(int i) throws GameHasNotBegunException {
+	public boolean takeSticks(int i) throws GameHasNotBegunException, GameHasEndedException {
 		if(!gameBegun){
 			throw new GameHasNotBegunException();
 		}
@@ -38,6 +38,9 @@ public class Game {
 			return false;
 		}
 		currentSticks -= i;
+		if(currentSticks == 0){
+			throw new GameHasEndedException();
+		}
 		// TODO Auto-generated method stub
 		return true;
 	}
