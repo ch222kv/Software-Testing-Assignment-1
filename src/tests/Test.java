@@ -46,8 +46,8 @@ public class Test {
 	}
 	@org.junit.Test
 	public void testGameBeginMessage(){
-		Game game = new Game();
 		PrintStream out = spy(System.out);
+		Game game = new Game(out);
 		
 		game.beginGame();
 		

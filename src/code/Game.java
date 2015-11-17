@@ -1,7 +1,17 @@
 package code;
 
+import java.io.PrintStream;
+
 public class Game {
 	private int sticks = 20;
+	private PrintStream outStream = null;
+	
+	public Game(){
+		this(System.out);
+	}
+	public Game(PrintStream outStream){
+		this.outStream = outStream;
+	}
 
 	public int getSticksLeft() {
 		// TODO Auto-generated method stub
@@ -26,7 +36,7 @@ public class Game {
 
 	public void beginGame() {
 		sticks = 20;
-		
+		this.outStream.println("The game has begun!");
 	}
 
 }
