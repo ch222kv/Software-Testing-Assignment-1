@@ -2,6 +2,8 @@ package code;
 
 import java.io.PrintStream;
 
+import tests.GameHasNotBegunException;
+
 public class Game {
 	private int sticks = 20;
 	private PrintStream outStream = null;
