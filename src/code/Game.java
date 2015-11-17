@@ -5,7 +5,7 @@ import java.io.PrintStream;
 import tests.GameHasNotBegunException;
 
 public class Game {
-	private int sticks = 20;
+	private int sticks;
 	private PrintStream outStream = null;
 	private boolean gameBegun = false;
 	
@@ -13,6 +13,13 @@ public class Game {
 		this(System.out);
 	}
 	public Game(PrintStream outStream){
+		this(20, outStream);
+	}
+	public Game(int stickCount){
+		this(stickCount, System.out);
+	}
+	public Game(int stickCount, PrintStream outStream){
+		sticks = stickCount;
 		this.outStream = outStream;
 	}
 

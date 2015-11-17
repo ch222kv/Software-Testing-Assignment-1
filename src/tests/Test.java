@@ -75,5 +75,9 @@ public class Test {
 		Game game = new Game(200);
 		
 		Game game_2 = new Game(2);
+		
+		int stickCount = game.getSticksLeft();
+		game.beginGame();
+		assertEquals(stickCount, game.getSticksLeft());
 	}
 }
