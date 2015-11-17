@@ -14,6 +14,7 @@ public class Test {
 	@org.junit.Before
 	public void setUp(){
 		this.game = new Game();
+		this.game.beginGame();
 	}
 	@org.junit.Test
 	public void testGetSticks() throws GameHasNotBegunException {
@@ -36,13 +37,13 @@ public class Test {
 	}
 	@org.junit.Test
 	public void testBeginGame() throws GameHasNotBegunException{
-		this.game.takeSticks(this.game.getSticksLeft());
+		Game game = new Game();
+		game.beginGame();
+		assertFalse(game.hasEnded());
 		
-		assertTrue(this.game.hasEnded());
+		game.takeSticks(this.game.getSticksLeft());
 		
-		this.game.beginGame();
-		
-		assertFalse(this.game.hasEnded());
+		assertTrue(game.hasEnded());
 	}
 	@org.junit.Test
 	public void testGameBeginMessage(){
@@ -55,11 +56,18 @@ public class Test {
 	}
 	@org.junit.Test
 	public void testNotTakeSticksBeforeGameBegin(){
+		Game game = new Game();
 		try{
-			this.game.takeSticks(4);
+			game.takeSticks(4);
 			fail("Exception should be thrown");
 		} catch(GameHasNotBegunException e){
 			
+		}
+		game.beginGame();
+		try{
+			game.takeSticks(4);
+		} catch(GameHasNotBegunException e){
+			fail("Exception should not be thrown");
 		}
 	}
 }

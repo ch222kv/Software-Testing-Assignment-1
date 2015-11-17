@@ -7,6 +7,7 @@ import tests.GameHasNotBegunException;
 public class Game {
 	private int sticks = 20;
 	private PrintStream outStream = null;
+	private boolean gameBegun = false;
 	
 	public Game(){
 		this(System.out);
@@ -21,6 +22,9 @@ public class Game {
 	}
 	
 	public boolean takeSticks(int i) throws GameHasNotBegunException {
+		if(!gameBegun){
+			throw new GameHasNotBegunException();
+		}
 		if(i > sticks){
 			return false;
 		}
@@ -37,6 +41,7 @@ public class Game {
 	}
 
 	public void beginGame() {
+		gameBegun = true;
 		sticks = 20;
 		this.outStream.println("The game has begun!");
 	}
