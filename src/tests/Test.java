@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import static org.mockito.Mockito.*;
 
+import java.io.PrintStream;
+
 import code.*;
 
 public class Test {
@@ -12,10 +14,6 @@ public class Test {
 	@org.junit.Before
 	public void setUp(){
 		this.game = new Game();
-	}
-	@org.junit.Test
-	public void test() {
-		
 	}
 	@org.junit.Test
 	public void testGetSticks() {
@@ -45,6 +43,15 @@ public class Test {
 		this.game.beginGame();
 		
 		assertFalse(this.game.hasEnded());
+	}
+	@org.junit.Test
+	public void testGameBeginMessage(){
+		Game game = new Game();
+		PrintStream out = spy(System.out);
+		
+		game.beginGame();
+		
+		verify(out).println("The game has begun!");
 	}
 
 }
