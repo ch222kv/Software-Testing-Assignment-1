@@ -18,7 +18,7 @@ public class Game {
 		return sticks;
 	}
 	
-	public boolean takeSticks(int i) {
+	public boolean takeSticks(int i) throws GameHasNotBegunException {
 		if(i > sticks){
 			return false;
 		}
