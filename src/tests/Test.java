@@ -70,4 +70,10 @@ public class Test {
 			fail("Exception should not be thrown");
 		}
 	}
+	@org.junit.Test
+	public void testAllowAnyCountOfSticks(){
+		Game game = new Game(200);
+		
+		Game game_2 = new Game(2);
+	}
 }
