@@ -80,4 +80,11 @@ public class Test {
 		game.beginGame();
 		assertEquals(stickCount, game.getSticksLeft());
 	}
+	@org.junit.Test
+	public void testSticksAfterResetSameAsBefore(){
+		Game game = new Game();
+		int stickCount = game.getSticksLeft();
+		game.beginGame();
+		assertEquals(stickCount, game.getSticksLeft());
+	}
 }
