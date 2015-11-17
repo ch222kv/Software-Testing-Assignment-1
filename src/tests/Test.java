@@ -53,5 +53,13 @@ public class Test {
 		
 		verify(out).println("The game has begun!");
 	}
-
+	@org.junit.Test
+	public void testNotTakeSticksBeforeGameBegin(){
+		try{
+			this.game.takeSticks(4);
+			fail("Exception should be thrown");
+		} catch(GameHasNotBegunException e){
+			
+		}
+	}
 }
