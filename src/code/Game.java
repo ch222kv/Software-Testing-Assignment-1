@@ -5,7 +5,7 @@ import java.io.PrintStream;
 import tests.GameHasNotBegunException;
 
 public class Game {
-	private int sticks;
+	private int currentSticks;
 	private int maxSticks;
 	private PrintStream outStream = null;
 	private boolean gameBegun = false;
@@ -20,30 +20,30 @@ public class Game {
 		this(stickCount, System.out);
 	}
 	public Game(int stickCount, PrintStream outStream){
-		sticks = stickCount;
+		currentSticks = stickCount;
 		maxSticks = stickCount;
 		this.outStream = outStream;
 	}
 
 	public int getSticksLeft() {
 		// TODO Auto-generated method stub
-		return sticks;
+		return currentSticks;
 	}
 	
 	public boolean takeSticks(int i) throws GameHasNotBegunException {
 		if(!gameBegun){
 			throw new GameHasNotBegunException();
 		}
-		if(i > sticks){
+		if(i > currentSticks){
 			return false;
 		}
-		sticks -= i;
+		currentSticks -= i;
 		// TODO Auto-generated method stub
 		return true;
 	}
 
 	public boolean hasEnded() {
-		if(sticks == 0){
+		if(currentSticks == 0){
 			return true;
 		}
 		return false;
@@ -51,7 +51,7 @@ public class Game {
 
 	public void beginGame() {
 		gameBegun = true;
-		sticks = maxSticks;
+		currentSticks = maxSticks;
 		this.outStream.println("The game has begun!");
 	}
 
