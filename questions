@@ -1,0 +1,57 @@
+What is a unit? 
+
+
+Explain what is different with TDD from ordinary testing?
+
+
+What is an Oracle? 
+An Oracle is someone who decides if the observed behavior is the expected one.
+
+How does an oracle know what is right? 
+SOmeone needs to tell the Oracle what is right, either by the specification or some other way.
+
+How does Unit Testing affect the SUT code?
+
+
+Do all tests need asserts?
+
+
+What is black box testing, white box testing? How are these related to writing unit tests?
+Black box testing, examining the functionality without knowing how it is achieved. Without knowing anything about the internals.
+White box testing, testing with knowledge of code internal workings. Tests are generated from source code.
+
+When maintaining code covered by test cases constructed by Black Box versus White Box, which may suffer the most changes?
+White box testing should suffer the most since it tests the actual lines of code and not just the behavior.
+
+What is the purpose of unit-testing?
+Uncovering errors
+
+Show example(s) from code where you used Equivalence Partitioning and Boundary Value Analysis to construct the code
+
+
+Show example(s) from code where you used Coverage to find new test-cases
+
+
+If multiple tests are broken, which do I fix first?
+
+
+What is the purpose of TDD?
+
+
+Can we always have 100% code-coverage?
+
+
+Explain different types of coverage criteria.
+
+
+What is the purpose of mocking?
+
+
+Does 100% coverage mean we are bug-free?
+No
+
+Does 100% MCDC coverage mean we are bug-free?
+No
+
+Why do we go for RED first?
+Going for RED first means that we know that the test actually can fail. You could write a test that should fail, but doesn't for some reason. If we do not check it first, you are not testing it correctly.
