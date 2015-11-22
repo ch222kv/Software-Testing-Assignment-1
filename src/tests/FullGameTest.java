@@ -62,4 +62,14 @@ public class FullGameTest {
 			verify(game).resetGame();
 		}
 	}
+	@Test
+	public void shouldThrowGameHasEnded(){
+		when(view.getInput()).thenReturn('y').thenReturn('9').thenReturn('9').thenReturn('2');
+		try{
+			sut.beginGame();
+			fail("Game should have ended");
+		} catch(GameHasEndedException e){
+			
+		}
+	}
 }
