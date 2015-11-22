@@ -8,7 +8,7 @@ import org.junit.Before;
 
 import code.*;
 
-public class GameViewTest {
+public class FullGameTest {
 	private GameView view;
 	private Game game;
 	private GameHandler sut;
