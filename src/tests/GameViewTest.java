@@ -13,7 +13,7 @@ public class GameViewTest {
 	
 	@Before
 	public void setUp() {
-		sut = mock(GameView());
+		sut = mock(GameView.class);
 	}
 	
 	@org.junit.Test
