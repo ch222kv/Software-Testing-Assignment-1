@@ -26,4 +26,8 @@ public class FullGameTest {
 	public void shouldDisplayStartMessage(){
 		verify(view).displayStartMessage();
 	}
+	@Test
+	public void shouldAskForInput(){
+		verify(view).getInput();
+	}
 }
