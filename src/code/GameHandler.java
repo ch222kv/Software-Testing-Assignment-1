@@ -18,7 +18,7 @@ public class GameHandler {
 	}
 	public void beginLoop(){
 		do{
-			
+			view.getStickInput();
 		}while(view.getInput() != 'Q');
 	}
 }
