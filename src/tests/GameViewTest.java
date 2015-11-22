@@ -19,7 +19,5 @@ public class GameViewTest {
 	@org.junit.Test
 	public void testDisplayStartMessage(){
 		sut.beginGame();
-		
-		verify(sut).displayStartMessage();
 	}
 }
