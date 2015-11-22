@@ -23,7 +23,7 @@ public class FullGameTest {
 	}
 	
 	@Test
-	public void displayStartMessage(){
+	public void shouldDisplayStartMessage(){
 		verify(view).displayStartMessage();
 	}
 }
