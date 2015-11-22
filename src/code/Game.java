@@ -35,7 +35,6 @@ public class Game {
 		if(i > currentSticks){
 			return false;
 		}
-		System.out.println("Current sticks left: " + currentSticks);
 		currentSticks -= i;
 		if(currentSticks == 0){
 			throw new GameHasEndedException();
