@@ -11,6 +11,9 @@ public class GameHandler {
 
 	public void beginGame() {
 		view.displayStartMessage();
-		view.getInput();
+		
+		if(view.getInput() == 'Q'){
+			view.displayQuitMessage();
+		}
 	}
 }

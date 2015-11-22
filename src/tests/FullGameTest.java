@@ -19,20 +19,22 @@ public class FullGameTest {
 		view = mock(GameView.class);
 		game = mock(Game.class);
 		sut = new GameHandler(view, game);
-		sut.beginGame();
 	}
 	
 	@Test
 	public void shouldDisplayStartMessage(){
+		sut.beginGame();
 		verify(view).displayStartMessage();
 	}
 	@Test
 	public void shouldAskForInput(){
-		verify(view).getInput();
+		sut.beginGame();
+		verify(view, atLeast(1)).getInput(); //Ignore multiple if there are
 	}
 	@Test
 	public void shouldQuitOnQ(){
 		when(view.getInput()).thenReturn('Q');
+		sut.beginGame();
 		verify(view).displayQuitMessage();
 	}
 }

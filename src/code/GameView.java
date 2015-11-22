@@ -10,6 +10,8 @@ public class GameView {
 
 	public char getInput() {
 		return 'Q';
+	}
+	public void displayQuitMessage(){
 		
 	}
 
