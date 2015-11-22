@@ -11,5 +11,6 @@ public class GameHandler {
 
 	public void beginGame() {
 		view.displayStartMessage();
+		view.getInput();
 	}
 }
