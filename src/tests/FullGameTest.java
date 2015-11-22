@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import org.junit.Before;
+import org.junit.Test;
 
 import code.*;
 
@@ -18,9 +19,11 @@ public class FullGameTest {
 		view = mock(GameView.class);
 		game = mock(Game.class);
 		sut = new GameHandler(view, game);
+		sut.beginGame();
 	}
 	
-	@org.junit.Test
-	public void testDisplayStartMessage(){
+	@Test
+	public void displayStartMessage(){
+		
 	}
 }
