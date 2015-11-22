@@ -37,4 +37,11 @@ public class FullGameTest {
 		sut.beginGame();
 		verify(view).displayQuitMessage();
 	}
+	@Test
+	public void shouldNotQuitFirstTimegetInputIsCalled(){
+		when(view.getInput()).thenReturn('x').thenReturn('Q');
+		
+		sut.beginGame();
+		verify(view, times(2)).getInput();
+	}
 }
