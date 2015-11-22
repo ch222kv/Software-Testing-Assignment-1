@@ -8,7 +8,7 @@ import java.io.PrintStream;
 
 import code.*;
 
-public class Test {
+public class GameTest {
 	private Game sut = null;
 	
 	@org.junit.Before
@@ -94,15 +94,10 @@ public class Test {
 		sut.beginGame();
 		assertEquals(stickCount, sut.getSticksLeft());
 	}
-	@org.junit.Test
-	public void testTakeSticksThrowsGameHasEndedExceptionOnGameEnd() throws GameHasNotBegunException{
+	@org.junit.Test(expected=GameHasEndedException.class)
+	public void testTakeSticksThrowsGameHasEndedExceptionOnGameEnd() throws GameHasNotBegunException, GameHasEndedException{
 		Game sut = new Game();
 		sut.beginGame();
-		try{
-			sut.takeSticks(sut.getSticksLeft());
-			fail("Should throw GameHasEndedException");
-		} catch(GameHasEndedException e){
-		}
-		
+		sut.takeSticks(sut.getSticksLeft());
 	}
 }
