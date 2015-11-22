@@ -1,4 +1,4 @@
-package tests;
+package code;
 
 public class GameHasNotBegunException extends Exception {
 

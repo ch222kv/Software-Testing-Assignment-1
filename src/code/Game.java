@@ -2,8 +2,6 @@ package code;
 
 import java.io.PrintStream;
 
-import tests.GameHasNotBegunException;
-
 public class Game {
 	private int currentSticks;
 	private int maxSticks;
