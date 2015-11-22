@@ -17,8 +17,13 @@ public class GameHandler {
 		view.displayQuitMessage();
 	}
 	public void beginLoop(){
+		char input;
 		do{
 			view.getStickInput();
-		}while(view.getInput() != 'Q');
+			input = view.getInput();
+			if(input == 'R'){
+				game.resetGame();
+			}
+		}while(input != 'Q');
 	}
 }
