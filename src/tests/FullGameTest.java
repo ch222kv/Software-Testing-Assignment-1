@@ -39,9 +39,9 @@ public class FullGameTest {
 	}
 	@Test
 	public void shouldNotQuitFirstTimegetInputIsCalled(){
-		when(view.getInput()).thenReturn('x').thenReturn('Q');
+		when(view.getInput()).thenReturn('y').thenReturn('x').thenReturn('Q');
 		
 		sut.beginGame();
-		verify(view, times(2)).getInput();
+		verify(view, times(3)).getInput();
 	}
 }
