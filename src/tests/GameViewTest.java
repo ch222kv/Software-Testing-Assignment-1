@@ -9,15 +9,18 @@ import org.junit.Before;
 import code.*;
 
 public class GameViewTest {
-	private GameView sut;
+	private GameView view;
+	private Game game;
+	private GameHandler sut;
 	
 	@Before
 	public void setUp() {
-		sut = mock(GameView.class);
+		view = mock(GameView.class);
+		game = mock(Game.class);
+		sut = new GameHandler(view, game);
 	}
 	
 	@org.junit.Test
 	public void testDisplayStartMessage(){
-		sut.beginGame();
 	}
 }
