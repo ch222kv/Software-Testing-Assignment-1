@@ -6,7 +6,7 @@ public class Game {
 	private int currentSticks;
 	private int maxSticks;
 	private PrintStream outStream = null;
-	private boolean gameBegun = false;
+	private boolean gameBegun = true;
 	
 	public Game(){
 		this(System.out);
@@ -50,10 +50,9 @@ public class Game {
 		return false;
 	}
 
-	public void beginGame() {
+	public void resetGame() {
 		gameBegun = true;
 		currentSticks = maxSticks;
-		this.outStream.println("The game has begun!");
 	}
 
 }

@@ -14,7 +14,6 @@ public class GameTest {
 	@org.junit.Before
 	public void setUp(){
 		sut = new Game();
-		sut.beginGame();
 	}
 	@org.junit.Test
 	public void testGetSticks() throws GameHasNotBegunException, GameHasEndedException {
@@ -41,7 +40,6 @@ public class GameTest {
 	@org.junit.Test
 	public void testBeginGame() throws GameHasNotBegunException{
 		Game sut = new Game();
-		sut.beginGame();
 		assertFalse(sut.hasEnded());
 		
 		try{
@@ -52,24 +50,14 @@ public class GameTest {
 		assertTrue(sut.hasEnded());
 	}
 	@org.junit.Test
-	public void testGameBeginMessage(){
-		PrintStream out = spy(System.out);
-		Game sut = new Game(out);
-		
-		sut.beginGame();
-		
-		verify(out).println("The game has begun!");
-	}
-	@org.junit.Test
 	public void testNotTakeSticksBeforeGameBegin() throws GameHasEndedException{
 		Game sut = new Game();
 		try{
 			sut.takeSticks(4);
-			fail("Exception should be thrown");
 		} catch(GameHasNotBegunException e){
-			
+			fail("Exception should not be thrown");
 		}
-		sut.beginGame();
+		sut.resetGame();
 		try{
 			sut.takeSticks(4);
 		} catch(GameHasNotBegunException e){
@@ -83,7 +71,6 @@ public class GameTest {
 		Game sut_2 = new Game(2);
 		
 		int stickCount = sut.getSticksLeft();
-		sut.beginGame();
 		assertEquals(stickCount, sut.getSticksLeft());
 		assertEquals(sut_2.getSticksLeft(), 2);
 	}
@@ -91,13 +78,11 @@ public class GameTest {
 	public void testSticksAfterResetSameAsBefore(){
 		Game sut = new Game(200);
 		int stickCount = sut.getSticksLeft();
-		sut.beginGame();
 		assertEquals(stickCount, sut.getSticksLeft());
 	}
 	@org.junit.Test(expected=GameHasEndedException.class)
 	public void testTakeSticksThrowsGameHasEndedExceptionOnGameEnd() throws GameHasNotBegunException, GameHasEndedException{
 		Game sut = new Game();
-		sut.beginGame();
 		sut.takeSticks(sut.getSticksLeft());
 	}
 }
