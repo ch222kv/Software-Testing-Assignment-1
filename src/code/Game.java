@@ -3,8 +3,8 @@ package code;
 import java.io.PrintStream;
 
 public class Game {
-	private int currentSticks;
-	private int maxSticks;
+	private int currentSticks = 20;
+	private int maxSticks = 20;
 	private PrintStream outStream = null;
 	private boolean gameBegun = true;
 	
@@ -35,6 +35,7 @@ public class Game {
 		if(i > currentSticks){
 			return false;
 		}
+		System.out.println("Current sticks left: " + currentSticks);
 		currentSticks -= i;
 		if(currentSticks == 0){
 			throw new GameHasEndedException();

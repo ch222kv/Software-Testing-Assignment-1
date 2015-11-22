@@ -22,30 +22,30 @@ public class FullGameTest {
 	}
 	
 	@Test
-	public void shouldDisplayStartMessage(){
+	public void shouldDisplayStartMessage() throws GameHasEndedException, GameHasNotBegunException{
 		sut.beginGame();
 		verify(view).displayStartMessage();
 	}
 	@Test
-	public void shouldAskForInput(){
+	public void shouldAskForInput() throws GameHasEndedException, GameHasNotBegunException{
 		sut.beginGame();
 		verify(view, atLeast(1)).getInput(); //Ignore multiple if there are
 	}
 	@Test
-	public void shouldQuitOnQ(){
+	public void shouldQuitOnQ() throws GameHasEndedException, GameHasNotBegunException{
 		when(view.getInput()).thenReturn('Q');
 		sut.beginGame();
 		verify(view).displayQuitMessage();
 	}
 	@Test
-	public void shouldNotQuitFirstTimegetInputIsCalled(){
+	public void shouldNotQuitFirstTimegetInputIsCalled() throws GameHasEndedException, GameHasNotBegunException{
 		when(view.getInput()).thenReturn('y').thenReturn('x').thenReturn('Q');
 		
 		sut.beginGame();
 		verify(view, times(3)).getInput();
 	}
 	@Test
-	public void shouldAskForStickCount(){
+	public void shouldAskForStickCount() throws GameHasEndedException, GameHasNotBegunException{
 		when(view.getInput()).thenReturn('y').thenReturn('Q');
 		sut.beginGame();
 		verify(view).getStickInput();
@@ -63,8 +63,12 @@ public class FullGameTest {
 		}
 	}
 	@Test
-	public void shouldThrowGameHasEnded(){
-		when(view.getInput()).thenReturn('y').thenReturn('9').thenReturn('9').thenReturn('2');
+	public void shouldThrowGameHasEnded() throws GameHasNotBegunException{
+		game = new Game();
+		sut = new GameHandler(view, game);
+		
+		when(view.getInput()).thenReturn('y').thenReturn('9').thenReturn('9').thenReturn('2').thenReturn('Q');
+		
 		try{
 			sut.beginGame();
 			fail("Game should have ended");

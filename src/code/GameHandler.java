@@ -28,6 +28,7 @@ public class GameHandler {
 				try {
 					game.takeSticks(Integer.parseInt(Character.toString(input)));
 				} catch (NumberFormatException e) {
+					System.out.println("What");
 				}
 			}
 		}while(input != 'Q');
