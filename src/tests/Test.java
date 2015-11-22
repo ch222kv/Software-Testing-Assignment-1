@@ -9,99 +9,99 @@ import java.io.PrintStream;
 import code.*;
 
 public class Test {
-	private Game game = null;
+	private Game sut = null;
 	
 	@org.junit.Before
 	public void setUp(){
-		this.game = new Game();
-		this.game.beginGame();
+		sut = new Game();
+		sut.beginGame();
 	}
 	@org.junit.Test
 	public void testGetSticks() throws GameHasNotBegunException, GameHasEndedException {
-		assertEquals(this.game.getSticksLeft(), 20);
-		assertTrue(this.game.takeSticks(1));
-		assertEquals(this.game.getSticksLeft(), 19);
+		assertEquals(sut.getSticksLeft(), 20);
+		assertTrue(sut.takeSticks(1));
+		assertEquals(sut.getSticksLeft(), 19);
 		
-		assertFalse(this.game.takeSticks(this.game.getSticksLeft() + 1));
+		assertFalse(sut.takeSticks(sut.getSticksLeft() + 1));
 		//Can't take more sticks than there are left
 		
 		for(int i = 20; i < 100; i++){
-			assertFalse(this.game.takeSticks(i));
+			assertFalse(sut.takeSticks(i));
 		}
 	}
 	@org.junit.Test
 	public void testGameHasEnded() throws GameHasNotBegunException{
-		assertFalse(this.game.hasEnded());
+		assertFalse(sut.hasEnded());
 		try{
-			this.game.takeSticks(game.getSticksLeft());
+			sut.takeSticks(sut.getSticksLeft());
 			fail("Should throw GameHasEndedException");
 		} catch(GameHasEndedException e){}
-		assertTrue(this.game.hasEnded());
+		assertTrue(sut.hasEnded());
 	}
 	@org.junit.Test
 	public void testBeginGame() throws GameHasNotBegunException{
-		Game game = new Game();
-		game.beginGame();
-		assertFalse(game.hasEnded());
+		Game sut = new Game();
+		sut.beginGame();
+		assertFalse(sut.hasEnded());
 		
 		try{
-			game.takeSticks(this.game.getSticksLeft());
+			sut.takeSticks(sut.getSticksLeft());
 		} catch(GameHasEndedException e){}
 		
 		
-		assertTrue(game.hasEnded());
+		assertTrue(sut.hasEnded());
 	}
 	@org.junit.Test
 	public void testGameBeginMessage(){
 		PrintStream out = spy(System.out);
-		Game game = new Game(out);
+		Game sut = new Game(out);
 		
-		game.beginGame();
+		sut.beginGame();
 		
 		verify(out).println("The game has begun!");
 	}
 	@org.junit.Test
 	public void testNotTakeSticksBeforeGameBegin() throws GameHasEndedException{
-		Game game = new Game();
+		Game sut = new Game();
 		try{
-			game.takeSticks(4);
+			sut.takeSticks(4);
 			fail("Exception should be thrown");
 		} catch(GameHasNotBegunException e){
 			
 		}
-		game.beginGame();
+		sut.beginGame();
 		try{
-			game.takeSticks(4);
+			sut.takeSticks(4);
 		} catch(GameHasNotBegunException e){
 			fail("Exception should not be thrown");
 		}
 	}
 	@org.junit.Test
 	public void testAllowAnyCountOfSticks(){
-		Game game = new Game(200);
+		Game sut = new Game(200);
 		
-		Game game_2 = new Game(2);
+		Game sut_2 = new Game(2);
 		
-		int stickCount = game.getSticksLeft();
-		game.beginGame();
-		assertEquals(stickCount, game.getSticksLeft());
+		int stickCount = sut.getSticksLeft();
+		sut.beginGame();
+		assertEquals(stickCount, sut.getSticksLeft());
+		assertEquals(sut_2.getSticksLeft(), 2);
 	}
 	@org.junit.Test
 	public void testSticksAfterResetSameAsBefore(){
-		Game game = new Game(200);
-		int stickCount = game.getSticksLeft();
-		game.beginGame();
-		assertEquals(stickCount, game.getSticksLeft());
+		Game sut = new Game(200);
+		int stickCount = sut.getSticksLeft();
+		sut.beginGame();
+		assertEquals(stickCount, sut.getSticksLeft());
 	}
 	@org.junit.Test
 	public void testTakeSticksThrowsGameHasEndedExceptionOnGameEnd() throws GameHasNotBegunException{
-		Game game = new Game();
-		game.beginGame();
+		Game sut = new Game();
+		sut.beginGame();
 		try{
-			game.takeSticks(game.getSticksLeft());
+			sut.takeSticks(sut.getSticksLeft());
 			fail("Should throw GameHasEndedException");
 		} catch(GameHasEndedException e){
-			
 		}
 		
 	}
