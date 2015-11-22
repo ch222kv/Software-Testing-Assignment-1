@@ -50,4 +50,16 @@ public class FullGameTest {
 		sut.beginGame();
 		verify(view).getStickInput();
 	}
+	@Test
+	public void shouldResetWhenInputIsR() throws GameHasNotBegunException, GameHasEndedException{
+		when(view.getInput()).thenReturn('y').thenReturn('R').thenReturn('Q');
+		when(game.takeSticks(anyInt())).thenThrow(GameHasEndedException.class);
+		
+		sut.beginGame();
+		try {
+			game.takeSticks(0);
+		} catch (GameHasEndedException e) {
+			verify(game).resetGame();
+		}
+	}
 }
