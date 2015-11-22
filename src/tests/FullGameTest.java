@@ -46,7 +46,7 @@ public class FullGameTest {
 	}
 	@Test
 	public void shouldAskForStickCount(){
-		when(view.getInput()).thenReturn('y');
+		when(view.getInput()).thenReturn('y').thenReturn('Q');
 		sut.beginGame();
 		verify(view).getStickInput();
 	}

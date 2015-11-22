@@ -15,4 +15,9 @@ public class GameView {
 		
 	}
 
+	public void getStickInput() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
