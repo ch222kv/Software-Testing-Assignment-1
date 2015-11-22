@@ -44,4 +44,10 @@ public class FullGameTest {
 		sut.beginGame();
 		verify(view, times(3)).getInput();
 	}
+	@Test
+	public void shouldAskForStickCount(){
+		when(view.getInput()).thenReturn('y');
+		sut.beginGame();
+		verify(view).getStickInput();
+	}
 }
