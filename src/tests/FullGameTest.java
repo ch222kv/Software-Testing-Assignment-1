@@ -30,4 +30,9 @@ public class FullGameTest {
 	public void shouldAskForInput(){
 		verify(view).getInput();
 	}
+	@Test
+	public void shouldQuitOnQ(){
+		when(view.getInput()).thenReturn('Q');
+		verify(view).displayQuitMessage();
+	}
 }

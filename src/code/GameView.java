@@ -8,8 +8,8 @@ public class GameView {
 	public void displayStartMessage() {		
 	}
 
-	public void getInput() {
-		// TODO Auto-generated method stub
+	public char getInput() {
+		return 'Q';
 		
 	}
 
