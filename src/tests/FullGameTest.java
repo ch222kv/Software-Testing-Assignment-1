@@ -24,6 +24,5 @@ public class FullGameTest {
 	
 	@Test
 	public void displayStartMessage(){
-		
 	}
 }
