@@ -20,7 +20,7 @@ public class GameView {
 		return "y";
 	}
 	public void displayQuitMessage(){
-		
+		out.println("You are now quitting the game. Have a good day!");
 	}
 
 	public void getStickInput() {

@@ -41,6 +41,6 @@ public class GameViewTest {
         GameView sut = new GameView(out, bufferedReader);
 
         sut.displayQuitMessage();
-        verify(out).println("You are not quitting the game. Have a good day!");
+        verify(out).println("You are now quitting the game. Have a good day!");
     }
 }
