@@ -7,10 +7,13 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 public class GameView {
+	private PrintStream out;
 	public GameView(PrintStream out, BufferedReader in){
+		this.out = out;
 	}
 
-	public void displayStartMessage() {		
+	public void displayStartMessage() {
+		out.println("Welcome to the 21 sticks game!");
 	}
 
 	public String getInput() {
