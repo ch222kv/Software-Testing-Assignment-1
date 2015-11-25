@@ -43,4 +43,15 @@ public class GameViewTest {
         sut.displayQuitMessage();
         verify(out).println("You are now quitting the game. Have a good day!");
     }
+
+    @Test
+    public void testgetSticksInput() throws IOException{
+        PrintStream out = mock(System.out.getClass());
+        BufferedReader bufferedReader = mock(BufferedReader.class);
+        GameView sut = new GameView(out, bufferedReader);
+        when(bufferedReader.readLine()).thenReturn("2");
+
+
+        assertEquals(2, sut.getStickInput());
+    }
 }
