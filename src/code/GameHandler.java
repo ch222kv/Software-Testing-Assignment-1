@@ -24,9 +24,9 @@ public class GameHandler {
 			input = view.getInput();
 			if(input.equals("R")){
 				game.resetGame();
-			} else if(Character.isDigit(input)){
+			} else {
 				try {
-					game.takeSticks(Integer.parseInt(Character.toString(input)));
+					game.takeSticks(Integer.parseInt(input));
 				} catch (NumberFormatException e) {
 				}
 			}
