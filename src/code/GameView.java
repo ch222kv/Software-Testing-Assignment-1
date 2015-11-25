@@ -14,7 +14,7 @@ public class GameView {
 	}
 
 	public char getInput() {
-		return 'Q';
+		return 'y';
 	}
 	public void displayQuitMessage(){
 		
