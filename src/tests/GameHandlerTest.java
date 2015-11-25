@@ -21,12 +21,14 @@ public class GameHandlerTest {
 
     @Test
     public void shouldDisplayStartMessage() throws GameHasEndedException, GameHasNotBegunException {
+        when(view.getInput()).thenReturn("Q");
         sut.beginGame();
         verify(view).displayStartMessage();
     }
 
     @Test
     public void shouldAskForInput() throws GameHasEndedException, GameHasNotBegunException {
+        when(view.getInput()).thenReturn("Q");
         sut.beginGame();
         verify(view, atLeast(1)).getInput(); //Ignore multiple if there are
     }

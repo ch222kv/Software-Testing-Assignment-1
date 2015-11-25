@@ -24,4 +24,13 @@ public class GameViewTest {
 
         assertEquals("y", sut.getInput());
     }
+    @Test
+    public void testDisplayStartMessage(){
+        PrintStream out = mock(System.out.getClass());
+        BufferedReader bufferedReader = mock(BufferedReader.class);
+        GameView sut = new GameView(out, bufferedReader);
+
+        sut.displayStartMessage();
+        verify(out).println("Welcome to the 21 sticks game!");
+    }
 }
