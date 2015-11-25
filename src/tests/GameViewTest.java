@@ -1,5 +1,6 @@
 package tests;
 import code.GameView;
+import code.InvalidInputException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -45,7 +46,7 @@ public class GameViewTest {
     }
 
     @Test
-    public void testGetSticksInputWith2() throws IOException{
+    public void testGetSticksInputWith2() throws IOException, NumberFormatException {
         when(in.readLine()).thenReturn("2");
 
         assertEquals(2, sut.getStickInput());
@@ -57,7 +58,7 @@ public class GameViewTest {
         try{
             sut.getStickInput();
             fail("getStickInput should throw InvalidInputException on anything not a valid number");
-        } catch(InvalidInputException e){
+        } catch(NumberFormatException e){
 
         }
     }

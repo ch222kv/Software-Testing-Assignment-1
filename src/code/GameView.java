@@ -2,14 +2,17 @@ package code;
 
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
 public class GameView {
 	private PrintStream out;
+	private BufferedReader in;
 	public GameView(PrintStream out, BufferedReader in){
 		this.out = out;
+		this.in = in;
 	}
 
 	public void displayStartMessage() {
@@ -23,9 +26,10 @@ public class GameView {
 		out.println("You are now quitting the game. Have a good day!");
 	}
 
-	public int getStickInput() {
+	public int getStickInput() throws NumberFormatException, IOException {
+		String input = in.readLine();
+		return Integer.parseInt(input);
 		// TODO Auto-generated method stub
-		return 2;
 	}
 
 }

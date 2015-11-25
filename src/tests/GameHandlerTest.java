@@ -4,6 +4,8 @@ import code.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
@@ -20,28 +22,28 @@ public class GameHandlerTest {
     }
 
     @Test
-    public void shouldDisplayStartMessage() throws GameHasEndedException, GameHasNotBegunException {
+    public void shouldDisplayStartMessage() throws GameHasEndedException, GameHasNotBegunException, IOException {
         when(view.getInput()).thenReturn("Q");
         sut.beginGame();
         verify(view).displayStartMessage();
     }
 
     @Test
-    public void shouldAskForInput() throws GameHasEndedException, GameHasNotBegunException {
+    public void shouldAskForInput() throws GameHasEndedException, GameHasNotBegunException, IOException {
         when(view.getInput()).thenReturn("Q");
         sut.beginGame();
         verify(view, atLeast(1)).getInput(); //Ignore multiple if there are
     }
 
     @Test
-    public void shouldQuitOnQ() throws GameHasEndedException, GameHasNotBegunException {
+    public void shouldQuitOnQ() throws GameHasEndedException, GameHasNotBegunException, IOException {
         when(view.getInput()).thenReturn("Q");
         sut.beginGame();
         verify(view).displayQuitMessage();
     }
 
     @Test
-    public void shouldNotQuitFirstTimegetInputIsCalled() throws GameHasEndedException, GameHasNotBegunException {
+    public void shouldNotQuitFirstTimegetInputIsCalled() throws GameHasEndedException, GameHasNotBegunException, IOException {
         when(view.getInput()).thenReturn("y").thenReturn("x").thenReturn("Q");
 
         sut.beginGame();
@@ -49,14 +51,14 @@ public class GameHandlerTest {
     }
 
     @Test
-    public void shouldAskForStickCount() throws GameHasEndedException, GameHasNotBegunException {
+    public void shouldAskForStickCount() throws GameHasEndedException, GameHasNotBegunException, InvalidInputException, IOException {
         when(view.getInput()).thenReturn("y").thenReturn("Q");
         sut.beginGame();
         verify(view).getStickInput();
     }
 
     @Test
-    public void shouldResetWhenInputIsR() throws GameHasNotBegunException, GameHasEndedException {
+    public void shouldResetWhenInputIsR() throws GameHasNotBegunException, GameHasEndedException, IOException {
         when(view.getInput()).thenReturn("y").thenReturn("R").thenReturn("Q");
         when(game.takeSticks(anyInt())).thenThrow(GameHasEndedException.class);
 
@@ -69,7 +71,7 @@ public class GameHandlerTest {
     }
 
     @Test
-    public void shouldThrowGameHasEnded() throws GameHasNotBegunException {
+    public void shouldThrowGameHasEnded() throws GameHasNotBegunException, IOException {
         game = new Game();
         sut = new GameHandler(view, game);
 
