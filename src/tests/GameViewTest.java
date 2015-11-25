@@ -16,41 +16,37 @@ import static org.mockito.Mockito.*;
  * Created by chris on 2015-11-25.
  */
 public class GameViewTest {
+    private GameView sut;
+    private PrintStream out;
+    private BufferedReader in;
+
+    @Before
+    public void setUp(){
+        in = mock(BufferedReader.class);
+        out = mock(System.out.getClass());
+        sut = new GameView(out, in);
+    }
     @Test
     public void testGetInputString() throws IOException {
-        BufferedReader bufferedReader = mock(BufferedReader.class);
-        GameView sut = new GameView(System.out, bufferedReader);
-        when(bufferedReader.readLine()).thenReturn("first line").thenReturn("second line");
+        when(in.readLine()).thenReturn("first line").thenReturn("second line");
 
         assertEquals("y", sut.getInput());
     }
     @Test
     public void testDisplayStartMessage(){
-        PrintStream out = mock(System.out.getClass());
-        BufferedReader bufferedReader = mock(BufferedReader.class);
-        GameView sut = new GameView(out, bufferedReader);
-
         sut.displayStartMessage();
         verify(out).println("Welcome to the 21 sticks game!");
     }
 
     @Test
     public void testDisplayQuitMessage(){
-        PrintStream out = mock(System.out.getClass());
-        BufferedReader bufferedReader = mock(BufferedReader.class);
-        GameView sut = new GameView(out, bufferedReader);
-
         sut.displayQuitMessage();
         verify(out).println("You are now quitting the game. Have a good day!");
     }
 
     @Test
-    public void testgetSticksInput() throws IOException{
-        PrintStream out = mock(System.out.getClass());
-        BufferedReader bufferedReader = mock(BufferedReader.class);
-        GameView sut = new GameView(out, bufferedReader);
-        when(bufferedReader.readLine()).thenReturn("2");
-
+    public void testGetSticksInputWith2() throws IOException{
+        when(in.readLine()).thenReturn("2");
 
         assertEquals(2, sut.getStickInput());
     }

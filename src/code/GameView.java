@@ -23,9 +23,9 @@ public class GameView {
 		out.println("You are now quitting the game. Have a good day!");
 	}
 
-	public void getStickInput() {
+	public int getStickInput() {
 		// TODO Auto-generated method stub
-		
+		return 2;
 	}
 
 }
