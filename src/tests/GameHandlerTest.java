@@ -33,14 +33,14 @@ public class GameHandlerTest {
 
     @Test
     public void shouldQuitOnQ() throws GameHasEndedException, GameHasNotBegunException {
-        when(view.getInput()).thenReturn('Q');
+        when(view.getInput()).thenReturn("Q");
         sut.beginGame();
         verify(view).displayQuitMessage();
     }
 
     @Test
     public void shouldNotQuitFirstTimegetInputIsCalled() throws GameHasEndedException, GameHasNotBegunException {
-        when(view.getInput()).thenReturn('y').thenReturn('x').thenReturn('Q');
+        when(view.getInput()).thenReturn("y").thenReturn("x").thenReturn("Q");
 
         sut.beginGame();
         verify(view, times(3)).getInput();
@@ -48,14 +48,14 @@ public class GameHandlerTest {
 
     @Test
     public void shouldAskForStickCount() throws GameHasEndedException, GameHasNotBegunException {
-        when(view.getInput()).thenReturn('y').thenReturn('Q');
+        when(view.getInput()).thenReturn("y").thenReturn("Q");
         sut.beginGame();
         verify(view).getStickInput();
     }
 
     @Test
     public void shouldResetWhenInputIsR() throws GameHasNotBegunException, GameHasEndedException {
-        when(view.getInput()).thenReturn('y').thenReturn('R').thenReturn('Q');
+        when(view.getInput()).thenReturn("y").thenReturn("R").thenReturn("Q");
         when(game.takeSticks(anyInt())).thenThrow(GameHasEndedException.class);
 
         sut.beginGame();
@@ -71,7 +71,7 @@ public class GameHandlerTest {
         game = new Game();
         sut = new GameHandler(view, game);
 
-        when(view.getInput()).thenReturn('y').thenReturn('9').thenReturn('9').thenReturn('2').thenReturn('Q');
+        when(view.getInput()).thenReturn("y").thenReturn("9").thenReturn("9").thenReturn("2").thenReturn("Q");
 
         try {
             sut.beginGame();

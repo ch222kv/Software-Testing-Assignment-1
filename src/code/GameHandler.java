@@ -12,17 +12,17 @@ public class GameHandler {
 	public void beginGame() throws GameHasEndedException, GameHasNotBegunException {
 		view.displayStartMessage();
 		
-		if(view.getInput() == 'y'){
+		if(view.getInput().equals("y")){
 			beginLoop();
 		}
 		view.displayQuitMessage();
 	}
 	public void beginLoop() throws GameHasEndedException, GameHasNotBegunException{
-		char input;
+		String input;
 		do{
 			view.getStickInput();
 			input = view.getInput();
-			if(input == 'R'){
+			if(input.equals("R")){
 				game.resetGame();
 			} else if(Character.isDigit(input)){
 				try {
@@ -30,6 +30,6 @@ public class GameHandler {
 				} catch (NumberFormatException e) {
 				}
 			}
-		}while(input != 'Q');
+		}while(!input.equals("Q"));
 	}
 }

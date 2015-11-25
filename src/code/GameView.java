@@ -13,8 +13,8 @@ public class GameView {
 	public void displayStartMessage() {		
 	}
 
-	public char getInput() {
-		return 'y';
+	public String getInput() {
+		return "y";
 	}
 	public void displayQuitMessage(){
 		
