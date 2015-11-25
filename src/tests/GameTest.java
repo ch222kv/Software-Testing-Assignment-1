@@ -1,12 +1,10 @@
 package tests;
 
+import code.Game;
+import code.GameHasEndedException;
+import code.GameHasNotBegunException;
+
 import static org.junit.Assert.*;
-
-import static org.mockito.Mockito.*;
-
-import java.io.PrintStream;
-
-import code.*;
 
 public class GameTest {
 	private Game sut = null;

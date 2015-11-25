@@ -1,20 +1,20 @@
 What is a unit? 
-
+A unit is a part of the code that you test. Most likely this will be a class that you test.
 
 Explain what is different with TDD from ordinary testing?
-
+With TDD you write your tests before you actually write that code that it tests. In TDD you should write a test before anything gets added.
 
 What is an Oracle? 
 An Oracle is someone who decides if the observed behavior is the expected one.
 
 How does an oracle know what is right? 
-SOmeone needs to tell the Oracle what is right, either by the specification or some other way.
+Someone needs to tell the Oracle what is right, either by the specification or some other way.
 
 How does Unit Testing affect the SUT code?
 
 
 Do all tests need asserts?
-
+No. You could do write a test where you check that no exceptions are being thrown. In JUnit, if an exception goes unhandled, the test fails. So no asserts were needed.
 
 What is black box testing, white box testing? How are these related to writing unit tests?
 Black box testing, examining the functionality without knowing how it is achieved. Without knowing anything about the internals.
@@ -27,31 +27,45 @@ What is the purpose of unit-testing?
 Uncovering errors
 
 Show example(s) from code where you used Equivalence Partitioning and Boundary Value Analysis to construct the code
-
+Equivalence Partitioning:
+Boundary Value Analysis: 
 
 Show example(s) from code where you used Coverage to find new test-cases
-
+I haven't since I didn't get code coverage up and running.
 
 If multiple tests are broken, which do I fix first?
-
+The first?
 
 What is the purpose of TDD?
-
+TDDs purpose is to prevent introduction of bugs by writing the tests before the code. When you change the code, you will also have the tests to check that the refactoring didn't break anything.
 
 Can we always have 100% code-coverage?
-
+Depends on what criteria we are looking at. You should probably be able to get 100% code coverage.
 
 Explain different types of coverage criteria.
+Function coverage, each function gets called.
+Statement coverage, each statement in the program gets executed.
+Branch coverage, has every branch of controlstatements been visited.
+Condition coverage, each boolean sub-expression evaluated to both true and false.
 
 
 What is the purpose of mocking?
+The purpose of mocking is to isolate the unit we are testing, when it has dependencies.
+Instead of relying on the implementation of a class that we are not currently testing, we can mock it.
 
 
 Does 100% coverage mean we are bug-free?
-No
+No. Depends on how you define bug-free. If you mean where bugs can crop up from untested code, then no. But, since bugs can come from every part in the development chain, then we are not guaranteed only because we have 100% test coverage.
 
 Does 100% MCDC coverage mean we are bug-free?
-No
+No. It should still be the same.
+
+MCDC: Modified condition/decision coveage. 
+Each entry and exit point is invoked. 
+Each decision tries every possibl outcome.
+Each condition in a decision takes on every possible outcome
+Each condition in a decision is shown to independently affect the outcome of the decision
+
 
 Why do we go for RED first?
 Going for RED first means that we know that the test actually can fail. You could write a test that should fail, but doesn't for some reason. If we do not check it first, you are not testing it correctly.
