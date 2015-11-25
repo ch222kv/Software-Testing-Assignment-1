@@ -33,4 +33,14 @@ public class GameViewTest {
         sut.displayStartMessage();
         verify(out).println("Welcome to the 21 sticks game!");
     }
+
+    @Test
+    public void testDisplayQuitMessage(){
+        PrintStream out = mock(System.out.getClass());
+        BufferedReader bufferedReader = mock(BufferedReader.class);
+        GameView sut = new GameView(out, bufferedReader);
+
+        sut.displayQuitMessage();
+        verify(out).println("You are not quitting the game. Have a good day!");
+    }
 }
