@@ -52,14 +52,9 @@ public class GameViewTest {
         assertEquals(2, sut.getStickInput());
     }
 
-    @Test
-    public void testGetSticksInputWithInputThatIsNotANumber() throws IOException{
+    @Test(expected = NumberFormatException.class)
+    public void testGetSticksInputWithInputThatIsNotANumberShouldThrowNumberFormatException() throws IOException{
         when(in.readLine()).thenReturn("x");
-        try{
-            sut.getStickInput();
-            fail("getStickInput should throw InvalidInputException on anything not a valid number");
-        } catch(NumberFormatException e){
-
-        }
+        sut.getStickInput();
     }
 }

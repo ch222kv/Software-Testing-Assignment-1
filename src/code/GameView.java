@@ -29,7 +29,6 @@ public class GameView {
 	public int getStickInput() throws NumberFormatException, IOException {
 		String input = in.readLine();
 		return Integer.parseInt(input);
-		// TODO Auto-generated method stub
 	}
 
 }
