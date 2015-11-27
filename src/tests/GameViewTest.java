@@ -72,4 +72,9 @@ public class GameViewTest {
         when(in.readLine()).thenReturn("-1");
         sut.getStickInput();
     }
+    @Test
+    public void testDisplayGameInstructions(){
+        sut.displayGameInstructions();
+        verify(out).println("The game is called 21 sticks. Your goal is to not take the last stick. You take a number of sticks, between 1 and 3, and the other player does the same. The player tha takes the last one loses.");
+    }
 }
