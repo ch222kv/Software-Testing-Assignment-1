@@ -68,4 +68,9 @@ public class GameViewTest {
         when(in.readLine()).thenReturn("0");
         sut.getStickInput();
     }
+    @Test(expected = NumberIsOutsideRangeException.class)
+    public void testGetSticksInputWithInputSmallerThan0() throws IOException, NumberIsOutsideRangeException {
+        when(in.readLine()).thenReturn("-1");
+        sut.getStickInput();
+    }
 }
