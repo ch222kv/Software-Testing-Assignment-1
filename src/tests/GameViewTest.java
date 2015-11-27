@@ -90,6 +90,6 @@ public class GameViewTest {
     @Test
     public void testDispayStartInstructions(){
         sut.displayStartInstructions();
-        verify(out).println("To begin the game write 'y', and to quit write 'Q'");
+        verify(out).print("To begin the game write 'y', and to quit write 'Q': ");
     }
 }
