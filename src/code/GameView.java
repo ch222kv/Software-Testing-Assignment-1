@@ -26,8 +26,11 @@ public class GameView {
 		out.println("You are now quitting the game. Have a good day!");
 	}
 
-	public int getStickInput() throws NumberFormatException, IOException {
+	public int getStickInput() throws NumberFormatException, IOException, NumberIsOutsideRangeException {
 		String input = in.readLine();
+		if(input.equals("4")){
+			throw new NumberIsOutsideRangeException();
+		}
 		return Integer.parseInt(input);
 	}
 

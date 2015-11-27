@@ -28,6 +28,8 @@ public class GameHandler {
 				view.getStickInput();
 			} catch(NumberFormatException e){
 				continue;
+			} catch (NumberIsOutsideRangeException e) {
+				continue;
 			}
 			if(input.equals("R")){
 				game.resetGame();

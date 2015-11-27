@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6e8e59f-2970-4ef9-b561-21fdca5ce013" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/code/NumberIsOutsideRangeException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameHandler.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameView.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameHandlerTest.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameHandlerTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameViewTest.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameViewTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/GameHandler.java" afterPath="$PROJECT_DIR$/src/code/GameHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/GameView.java" afterPath="$PROJECT_DIR$/src/code/GameView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/GameHandlerTest.java" afterPath="$PROJECT_DIR$/src/tests/GameHandlerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/GameViewTest.java" afterPath="$PROJECT_DIR$/src/tests/GameViewTest.java" />
     </list>
     <ignored path="Software-Testing-Assignment-1.iws" />
@@ -31,8 +36,8 @@
       <file leaf-file-name="GameView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
+            <state vertical-scroll-proportion="-11.207547">
+              <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -42,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/tests/GameHandlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="22" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
+              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/src/code/GameHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -75,8 +80,8 @@
       <file leaf-file-name="GameViewTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tests/GameViewTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.119403">
-              <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+            <state vertical-scroll-proportion="1.2179104">
+              <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,11 +131,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/tests/GameTest.java" />
         <option value="$PROJECT_DIR$/src/code/InvalidInputException.java" />
+        <option value="$PROJECT_DIR$/src/code/NumberIsOutsideRangeException.java" />
+        <option value="$PROJECT_DIR$/src/code/GameView.java" />
         <option value="$PROJECT_DIR$/src/tests/GameHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/code/GameHandler.java" />
-        <option value="$PROJECT_DIR$/src/code/GameView.java" />
         <option value="$PROJECT_DIR$/src/tests/GameViewTest.java" />
-        <option value="$PROJECT_DIR$/src/code/NumberIsOutsideRangeException.java" />
       </list>
     </option>
   </component>
@@ -702,7 +707,7 @@
       <option name="number" value="Default" />
       <updated>1448480427582</updated>
       <workItem from="1448480429717" duration="5137000" />
-      <workItem from="1448640209965" duration="232000" />
+      <workItem from="1448640209965" duration="368000" />
     </task>
     <task id="LOCAL-00001" summary="RED">
       <created>1448482315128</created>
@@ -776,15 +781,21 @@
       <option name="project" value="LOCAL" />
       <updated>1448485066825</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="RED">
+      <created>1448640449670</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1448640449670</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="RunAllTests - 2015.11.27 at 17h 07m 18s.xml">
       <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Unnamed - 2015.11.25 at 21h 27m 34s.xml">
-      <configuration name="Unnamed" configurationId="JUnit" />
+    <history-entry file="RunAllTests - 2015.11.27 at 17h 09m 35s.xml">
+      <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Unnamed - 2015.11.25 at 21h 30m 33s.xml">
       <configuration name="Unnamed" configurationId="JUnit" />
@@ -812,7 +823,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5369000" />
+    <option name="totallyTimeSpent" value="5505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
@@ -851,9 +862,9 @@
     <MESSAGE value="Fixed almost everything" />
     <MESSAGE value="GREEN" />
     <MESSAGE value="Fixed a bug in my test code, wow.&#10;GREEN" />
-    <MESSAGE value="RED" />
     <MESSAGE value="Breaking tests all day long, GREEN" />
-    <option name="LAST_COMMIT_MESSAGE" value="Breaking tests all day long, GREEN" />
+    <MESSAGE value="RED" />
+    <option name="LAST_COMMIT_MESSAGE" value="RED" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -987,10 +998,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/NumberIsOutsideRangeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.207547">
+          <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/GameHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="22" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
+          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1000,31 +1027,15 @@
     <entry file="file://$PROJECT_DIR$/src/code/GameHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="73" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/code/NumberIsOutsideRangeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/GameViewTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.119403">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+        <state vertical-scroll-proportion="1.2179104">
+          <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

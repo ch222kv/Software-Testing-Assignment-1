@@ -51,7 +51,7 @@ public class GameHandlerTest {
     }
 
     @Test
-    public void shouldAskForStickCount() throws GameHasEndedException, GameHasNotBegunException, InvalidInputException, IOException {
+    public void shouldAskForStickCount() throws GameHasEndedException, GameHasNotBegunException, InvalidInputException, IOException, NumberIsOutsideRangeException {
         when(view.getInput()).thenReturn("y").thenReturn("Q");
         sut.beginGame();
         verify(view).getStickInput();

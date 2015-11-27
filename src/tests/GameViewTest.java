@@ -47,19 +47,19 @@ public class GameViewTest {
     }
 
     @Test
-    public void testGetSticksInputWith2() throws IOException, NumberFormatException {
+    public void testGetSticksInputWith2() throws IOException, NumberFormatException, NumberIsOutsideRangeException {
         when(in.readLine()).thenReturn("2");
 
         assertEquals(2, sut.getStickInput());
     }
 
     @Test(expected = NumberFormatException.class)
-    public void testGetSticksInputWithInputThatIsNotANumberShouldThrowNumberFormatException() throws IOException{
+    public void testGetSticksInputWithInputThatIsNotANumberShouldThrowNumberFormatException() throws IOException, NumberIsOutsideRangeException {
         when(in.readLine()).thenReturn("x");
         sut.getStickInput();
     }
     @Test(expected = NumberIsOutsideRangeException.class)
-    public void testGetSticksInputWithInputBiggerThan3() throws IOException{
+    public void testGetSticksInputWithInputBiggerThan3() throws IOException, NumberIsOutsideRangeException {
         when(in.readLine()).thenReturn("4");
         sut.getStickInput();
     }
