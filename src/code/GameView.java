@@ -33,6 +33,8 @@ public class GameView {
 			throw new NumberIsOutsideRangeException();
 		} else if (parsedInt == 0){
 			throw new NumberIsOutsideRangeException();
+		} else if (parsedInt < 0){
+			throw new NumberIsOutsideRangeException();
 		}
 		return Integer.parseInt(input);
 	}
