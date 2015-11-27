@@ -88,7 +88,7 @@ public class GameHandlerTest {
     }
     @Test
     public void testPrintOutSticksLeft() throws GameHasNotBegunException, GameHasEndedException, IOException {
-        when(view.getInput()).thenReturn("y");
+        when(view.getInput()).thenReturn("y").thenReturn("Q");
         sut.beginGame();
         verify(view).displaySticksLeft(anyInt());
     }
