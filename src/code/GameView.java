@@ -39,7 +39,7 @@ public class GameView {
     }
 
     public void displaySticksLeft(int sticks){
-        out.println(String.format("There are %s sticks left", sticks));
+        out.println(String.format("There are %s sticks left.", sticks));
     }
 
     public void displayGameInstructions() {
