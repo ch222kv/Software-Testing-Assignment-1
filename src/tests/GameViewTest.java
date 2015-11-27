@@ -29,10 +29,9 @@ public class GameViewTest {
         sut = new GameView(out, in);
     }
     @Test
-    public void testGetInputString() throws IOException {
-        when(in.readLine()).thenReturn("first line").thenReturn("second line");
-
-        assertEquals("y", sut.getInput());
+    public void testReadInputReturnY() throws IOException {
+        when(in.readLine()).thenReturn("y");
+        assertEquals("y",sut.getInput());
     }
     @Test
     public void testDisplayStartMessage(){
