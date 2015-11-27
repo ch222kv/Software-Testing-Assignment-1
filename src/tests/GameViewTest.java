@@ -77,4 +77,13 @@ public class GameViewTest {
         sut.displayGameInstructions();
         verify(out).println("The game is called 21 sticks. Your goal is to not take the last stick. You take a number of sticks, between 1 and 3, and the other player does the same. The player tha takes the last one loses.");
     }
+    @Test
+    public void testGetSticksPrintsInstructions() throws IOException, NumberIsOutsideRangeException {
+        try{
+            sut.getStickInput();
+        } catch(NumberFormatException e){
+        }
+
+        verify(out).print("Please write the number of sticks to take, between 1 and 3: ");
+    }
 }
