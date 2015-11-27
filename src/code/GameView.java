@@ -19,8 +19,8 @@ public class GameView {
 		out.println("Welcome to the 21 sticks game!");
 	}
 
-	public String getInput() {
-		return "y";
+	public String getInput() throws IOException {
+		return this.in.readLine();
 	}
 	public void displayQuitMessage(){
 		out.println("You are now quitting the game. Have a good day!");
