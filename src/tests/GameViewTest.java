@@ -1,6 +1,7 @@
 package tests;
 import code.GameView;
 import code.InvalidInputException;
+import code.NumberIsOutsideRangeException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -55,6 +56,11 @@ public class GameViewTest {
     @Test(expected = NumberFormatException.class)
     public void testGetSticksInputWithInputThatIsNotANumberShouldThrowNumberFormatException() throws IOException{
         when(in.readLine()).thenReturn("x");
+        sut.getStickInput();
+    }
+    @Test(expected = NumberIsOutsideRangeException.class)
+    public void testGetSticksInputWithInputBiggerThan3() throws IOException{
+        when(in.readLine()).thenReturn("4");
         sut.getStickInput();
     }
 }
