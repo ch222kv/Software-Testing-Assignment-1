@@ -22,7 +22,7 @@ public class GameHandler {
 	public void beginLoop() throws GameHasEndedException, GameHasNotBegunException, IOException {
 		String input = "";
 		do{
-			view.displaySticksLeft(0);
+			view.displaySticksLeft(game.getSticksLeft());
 			try{
 				view.getStickInput();
 			} catch(NumberFormatException e){
