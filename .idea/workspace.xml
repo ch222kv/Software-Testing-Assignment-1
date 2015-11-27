@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6e8e59f-2970-4ef9-b561-21fdca5ce013" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameHandler.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameView.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameViewTest.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameViewTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/GameHandler.java" afterPath="$PROJECT_DIR$/src/code/GameHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/GameView.java" afterPath="$PROJECT_DIR$/src/code/GameView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/GameViewTest.java" afterPath="$PROJECT_DIR$/src/tests/GameViewTest.java" />
     </list>
     <ignored path="Software-Testing-Assignment-1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/code/GameHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39402986">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
               <folding />
             </state>
@@ -100,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameViewTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameViewTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tests/GameViewTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="36" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.90149254">
+              <caret line="97" column="53" selection-start-line="97" selection-start-column="29" selection-end-line="97" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,10 +154,10 @@
         <option value="$PROJECT_DIR$/src/code/InvalidInputException.java" />
         <option value="$PROJECT_DIR$/src/code/NumberIsOutsideRangeException.java" />
         <option value="$PROJECT_DIR$/src/code/GameMain.java" />
-        <option value="$PROJECT_DIR$/src/tests/GameViewTest.java" />
         <option value="$PROJECT_DIR$/src/tests/GameHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/code/GameView.java" />
         <option value="$PROJECT_DIR$/src/code/GameHandler.java" />
+        <option value="$PROJECT_DIR$/src/tests/GameViewTest.java" />
       </list>
     </option>
   </component>
@@ -757,7 +755,7 @@
       <option name="number" value="Default" />
       <updated>1448480427582</updated>
       <workItem from="1448480429717" duration="5137000" />
-      <workItem from="1448640209965" duration="3785000" />
+      <workItem from="1448640209965" duration="3841000" />
     </task>
     <task id="LOCAL-00001" summary="RED">
       <created>1448482315128</created>
@@ -969,13 +967,16 @@
       <option name="project" value="LOCAL" />
       <updated>1448649788494</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="REFACTOR">
+      <created>1448649903987</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1448649903987</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunAllTests - 2015.11.27 at 19h 31m 42s.xml">
-      <configuration name="RunAllTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RunAllTests - 2015.11.27 at 19h 32m 15s.xml">
       <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
@@ -1003,9 +1004,12 @@
     <history-entry file="RunAllTests - 2015.11.27 at 19h 44m 57s.xml">
       <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RunAllTests - 2015.11.27 at 19h 45m 54s.xml">
+      <configuration name="RunAllTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8922000" />
+    <option name="totallyTimeSpent" value="8978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
@@ -1044,7 +1048,6 @@
     <MESSAGE value="Fixed almost everything" />
     <MESSAGE value="Fixed a bug in my test code, wow.&#10;GREEN" />
     <MESSAGE value="Breaking tests all day long, GREEN" />
-    <MESSAGE value="REFACTOR" />
     <MESSAGE value="Changed a test." />
     <MESSAGE value="REACTOR" />
     <MESSAGE value="REFACTORED another test" />
@@ -1052,7 +1055,8 @@
     <MESSAGE value="GREEN" />
     <MESSAGE value="RED" />
     <MESSAGE value="GREEN and broke another test" />
-    <option name="LAST_COMMIT_MESSAGE" value="GREEN and broke another test" />
+    <MESSAGE value="REFACTOR" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1199,16 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/GameViewTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="36" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/code/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1237,6 +1231,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/GameHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1250,11 +1252,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/code/GameHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/GameViewTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39402986">
-          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-          <folding />
+        <state vertical-scroll-proportion="0.90149254">
+          <caret line="97" column="53" selection-start-line="97" selection-start-column="29" selection-end-line="97" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -92,4 +92,9 @@ public class GameViewTest {
         sut.displayStartInstructions();
         verify(out).print("To begin the game write 'y', and to quit write 'Q': ");
     }
+    @Test
+    public void testDisplaySticksLeft(){
+        sut.displaySticksLeft(5);
+        verify(out).println("There are 5 sticks left.");
+    }
 }
