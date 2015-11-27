@@ -45,7 +45,7 @@ public class GameHandlerTest {
 
     @Test
     public void shouldAskForStickCount() throws GameHasEndedException, GameHasNotBegunException, InvalidInputException, IOException, NumberIsOutsideRangeException {
-        when(view.getInput()).thenReturn("y").thenReturn("Q");
+        when(view.getInput()).thenReturn("y");
         when(view.getStickInput()).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(2);
         when(game.takeSticks(anyInt())).thenCallRealMethod();
         when(game.getSticksLeft()).thenReturn(17).thenReturn(14).thenReturn(11).thenReturn(8).thenReturn(5).thenReturn(2).thenThrow(GameHasEndedException.class);
@@ -61,7 +61,7 @@ public class GameHandlerTest {
         game = new Game();
         sut = new GameHandler(view, game);
 
-        when(view.getInput()).thenReturn("y").thenReturn("Q");
+        when(view.getInput()).thenReturn("y");
         when(view.getStickInput()).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(2);
 
         try {
@@ -73,7 +73,7 @@ public class GameHandlerTest {
     }
     @Test
     public void testPrintOutSticksLeft() throws GameHasNotBegunException, IOException, NumberIsOutsideRangeException, GameHasEndedException {
-        when(view.getInput()).thenReturn("y").thenReturn("Q");
+        when(view.getInput()).thenReturn("y");
         when(view.getStickInput()).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(2);
         when(game.takeSticks(anyInt())).thenCallRealMethod();
         when(game.getSticksLeft()).thenReturn(17).thenReturn(14).thenReturn(11).thenReturn(8).thenReturn(5).thenReturn(2).thenThrow(GameHasEndedException.class);
