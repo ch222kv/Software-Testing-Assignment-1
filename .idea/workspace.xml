@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6e8e59f-2970-4ef9-b561-21fdca5ce013" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameHandlerTest.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameHandlerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameHandler.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/GameHandlerTest.java" afterPath="$PROJECT_DIR$/src/tests/GameHandlerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/GameHandler.java" afterPath="$PROJECT_DIR$/src/code/GameHandler.java" />
     </list>
     <ignored path="Software-Testing-Assignment-1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameHandlerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameHandlerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/GameHandlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45970148">
+            <state vertical-scroll-proportion="0.0">
               <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/code/GameHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.3641791">
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -152,10 +152,10 @@
         <option value="$PROJECT_DIR$/src/code/InvalidInputException.java" />
         <option value="$PROJECT_DIR$/src/code/NumberIsOutsideRangeException.java" />
         <option value="$PROJECT_DIR$/src/code/GameMain.java" />
-        <option value="$PROJECT_DIR$/src/code/GameHandler.java" />
         <option value="$PROJECT_DIR$/src/tests/GameViewTest.java" />
         <option value="$PROJECT_DIR$/src/code/GameView.java" />
         <option value="$PROJECT_DIR$/src/tests/GameHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/code/GameHandler.java" />
       </list>
     </option>
   </component>
@@ -753,7 +753,7 @@
       <option name="number" value="Default" />
       <updated>1448480427582</updated>
       <workItem from="1448480429717" duration="5137000" />
-      <workItem from="1448640209965" duration="3026000" />
+      <workItem from="1448640209965" duration="3050000" />
     </task>
     <task id="LOCAL-00001" summary="RED">
       <created>1448482315128</created>
@@ -935,13 +935,16 @@
       <option name="project" value="LOCAL" />
       <updated>1448649109084</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="RED?">
+      <created>1448649149627</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1448649149627</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunAllTests - 2015.11.27 at 17h 40m 19s.xml">
-      <configuration name="RunAllTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RunAllTests - 2015.11.27 at 17h 40m 52s.xml">
       <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
@@ -969,9 +972,12 @@
     <history-entry file="RunAllTests - 2015.11.27 at 19h 32m 15s.xml">
       <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RunAllTests - 2015.11.27 at 19h 32m 42s.xml">
+      <configuration name="RunAllTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8163000" />
+    <option name="totallyTimeSpent" value="8187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
@@ -1016,7 +1022,8 @@
     <MESSAGE value="REFACTORED another test" />
     <MESSAGE value="RED" />
     <MESSAGE value="GREEN" />
-    <option name="LAST_COMMIT_MESSAGE" value="GREEN" />
+    <MESSAGE value="RED?" />
+    <option name="LAST_COMMIT_MESSAGE" value="RED?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1179,14 +1186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/code/GameHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1210,11 +1209,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/GameHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45970148">
+        <state vertical-scroll-proportion="0.0">
           <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/GameHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3641791">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

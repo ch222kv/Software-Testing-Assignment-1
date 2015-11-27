@@ -13,7 +13,7 @@ public class GameHandler {
 
 	public void beginGame() throws GameHasEndedException, GameHasNotBegunException, IOException {
 		view.displayStartMessage();
-		
+		view.displayStartInstructions();
 		if(view.getInput().equals("y")){
 			beginLoop();
 		}
