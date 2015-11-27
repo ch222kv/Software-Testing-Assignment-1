@@ -35,7 +35,7 @@ public class GameView {
         } else if (parsedInt <= 0) {
             throw new NumberIsOutsideRangeException();
         }
-        return Integer.parseInt(input);
+        return parsedInt;
     }
 
     public void displayGameInstructions() {
