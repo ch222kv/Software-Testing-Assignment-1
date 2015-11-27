@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6e8e59f-2970-4ef9-b561-21fdca5ce013" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameView.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameView.class" />
+    <list default="true" id="e6e8e59f-2970-4ef9-b561-21fdca5ce013" name="Default" comment="GREEN">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/GameView.java" afterPath="$PROJECT_DIR$/src/code/GameView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/GameViewTest.java" afterPath="$PROJECT_DIR$/src/tests/GameViewTest.java" />
     </list>
     <ignored path="Software-Testing-Assignment-1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +30,8 @@
       <file leaf-file-name="GameView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7972689">
-              <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.7626051">
+              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -75,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/tests/GameViewTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -701,7 +701,7 @@
       <option name="number" value="Default" />
       <updated>1448480427582</updated>
       <workItem from="1448480429717" duration="5137000" />
-      <workItem from="1448640209965" duration="511000" />
+      <workItem from="1448640209965" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="RED">
       <created>1448482315128</created>
@@ -799,7 +799,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448640695923</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="GREEN">
+      <created>1448640724669</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1448640724669</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -818,8 +824,8 @@
     <history-entry file="RunAllTests - 2015.11.27 at 17h 11m 58s.xml">
       <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Unnamed - 2015.11.25 at 21h 51m 36s.xml">
-      <configuration name="Unnamed" configurationId="JUnit" />
+    <history-entry file="RunAllTests - 2015.11.27 at 17h 15m 41s.xml">
+      <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Unnamed - 2015.11.25 at 21h 55m 52s.xml">
       <configuration name="Unnamed" configurationId="JUnit" />
@@ -835,11 +841,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5648000" />
+    <option name="totallyTimeSpent" value="5869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -874,10 +880,10 @@
     <MESSAGE value="Fixed almost everything" />
     <MESSAGE value="Fixed a bug in my test code, wow.&#10;GREEN" />
     <MESSAGE value="Breaking tests all day long, GREEN" />
-    <MESSAGE value="GREEN" />
     <MESSAGE value="REFACTOR" />
     <MESSAGE value="RED" />
-    <option name="LAST_COMMIT_MESSAGE" value="RED" />
+    <MESSAGE value="GREEN" />
+    <option name="LAST_COMMIT_MESSAGE" value="GREEN" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1040,7 +1046,7 @@
     <entry file="file://$PROJECT_DIR$/src/tests/GameViewTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1049,8 +1055,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7972689">
-          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.7626051">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
           <folding />
         </state>
       </provider>
