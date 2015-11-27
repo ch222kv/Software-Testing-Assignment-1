@@ -14,6 +14,7 @@ public class GameHandler {
 	public void beginGame() throws GameHasEndedException, GameHasNotBegunException, IOException {
 		view.displayStartMessage();
 		view.displayStartInstructions();
+
 		if(view.getInput().equals("y")){
 			beginLoop();
 		}
@@ -21,24 +22,18 @@ public class GameHandler {
 	}
 	public void beginLoop() throws GameHasEndedException, GameHasNotBegunException, IOException {
 		String input = "";
-		do{
+		int stickInput = 0;
+
+		while(true){
 			view.displaySticksLeft(game.getSticksLeft());
 			try{
-				view.getStickInput();
+				stickInput = view.getStickInput();
 			} catch(NumberFormatException e){
 				continue;
 			} catch (NumberIsOutsideRangeException e) {
 				continue;
 			}
-			input = view.getInput();
-			if(input.equals("R")){
-				game.resetGame();
-			} else {
-				try {
-					game.takeSticks(Integer.parseInt(input));
-				} catch (NumberFormatException e) {
-				}
-			}
-		}while(!input.equals("Q"));
+			game.takeSticks(stickInput);
+		}
 	}
 }

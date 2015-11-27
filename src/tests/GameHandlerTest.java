@@ -44,31 +44,16 @@ public class GameHandlerTest {
     }
 
     @Test
-    public void shouldNotQuitFirstTimegetInputIsCalled() throws GameHasEndedException, GameHasNotBegunException, IOException {
-        when(view.getInput()).thenReturn("y").thenReturn("x").thenReturn("Q");
-
-        sut.beginGame();
-        verify(view, times(3)).getInput();
-    }
-
-    @Test
     public void shouldAskForStickCount() throws GameHasEndedException, GameHasNotBegunException, InvalidInputException, IOException, NumberIsOutsideRangeException {
         when(view.getInput()).thenReturn("y").thenReturn("Q");
-        sut.beginGame();
-        verify(view).getStickInput();
-    }
+        when(view.getStickInput()).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(2);
+        when(game.takeSticks(anyInt())).thenCallRealMethod();
+        when(game.getSticksLeft()).thenReturn(17).thenReturn(14).thenReturn(11).thenReturn(8).thenReturn(5).thenReturn(2).thenThrow(GameHasEndedException.class);
 
-    @Test
-    public void shouldResetWhenInputIsR() throws GameHasNotBegunException, GameHasEndedException, IOException {
-        when(view.getInput()).thenReturn("y").thenReturn("R").thenReturn("Q");
-        when(game.takeSticks(anyInt())).thenThrow(GameHasEndedException.class);
-
-        sut.beginGame();
-        try {
-            game.takeSticks(0);
-        } catch (GameHasEndedException e) {
-            verify(game).resetGame();
-        }
+        try{
+            sut.beginGame();
+        } catch(GameHasEndedException e){}
+        verify(view, times(6)).getStickInput();
     }
 
     @Test
@@ -87,9 +72,15 @@ public class GameHandlerTest {
         }
     }
     @Test
-    public void testPrintOutSticksLeft() throws GameHasNotBegunException, GameHasEndedException, IOException {
+    public void testPrintOutSticksLeft() throws GameHasNotBegunException, IOException, NumberIsOutsideRangeException, GameHasEndedException {
         when(view.getInput()).thenReturn("y").thenReturn("Q");
-        sut.beginGame();
-        verify(view).displaySticksLeft(anyInt());
+        when(view.getStickInput()).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(2);
+        when(game.takeSticks(anyInt())).thenCallRealMethod();
+        when(game.getSticksLeft()).thenReturn(17).thenReturn(14).thenReturn(11).thenReturn(8).thenReturn(5).thenReturn(2).thenThrow(GameHasEndedException.class);
+        try{
+            sut.beginGame();
+        } catch(GameHasEndedException e){}
+
+        verify(view, times(6)).displaySticksLeft(anyInt());
     }
 }

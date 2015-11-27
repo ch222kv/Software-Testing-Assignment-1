@@ -6,7 +6,6 @@ public class Game {
 	private int currentSticks = 20;
 	private int maxSticks = 20;
 	private PrintStream outStream = null;
-	private boolean gameBegun = true;
 	
 	public Game(){
 		this(System.out);
@@ -29,9 +28,6 @@ public class Game {
 	}
 	
 	public boolean takeSticks(int i) throws GameHasNotBegunException, GameHasEndedException {
-		if(!gameBegun){
-			throw new GameHasNotBegunException();
-		}
 		if(i > currentSticks){
 			return false;
 		}
@@ -51,7 +47,6 @@ public class Game {
 	}
 
 	public void resetGame() {
-		gameBegun = true;
 		currentSticks = maxSticks;
 	}
 
