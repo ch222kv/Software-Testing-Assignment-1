@@ -27,6 +27,7 @@ public class GameView {
     }
 
     public int getStickInput() throws NumberFormatException, IOException, NumberIsOutsideRangeException {
+        out.print("Please write the number of sticks to take, between 1 and 3: ");
         String input = in.readLine();
         int parsedInt = Integer.parseInt(input);
         if (parsedInt > 3) {
