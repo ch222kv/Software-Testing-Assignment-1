@@ -28,7 +28,7 @@ public class GameView {
 
 	public int getStickInput() throws NumberFormatException, IOException, NumberIsOutsideRangeException {
 		String input = in.readLine();
-		if(input.equals("4")){
+		if(Integer.parseInt(input) > 3){
 			throw new NumberIsOutsideRangeException();
 		}
 		return Integer.parseInt(input);
