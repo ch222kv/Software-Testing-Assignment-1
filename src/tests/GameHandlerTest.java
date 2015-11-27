@@ -26,6 +26,7 @@ public class GameHandlerTest {
         when(view.getInput()).thenReturn("Q");
         sut.beginGame();
         verify(view).displayStartMessage();
+        verify(view).displayStartInstructions();
     }
 
     @Test
