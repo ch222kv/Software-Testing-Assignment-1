@@ -3,38 +3,41 @@ package code;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintStream;
-import java.util.Scanner;
 
 public class GameView {
-	private PrintStream out;
-	private BufferedReader in;
-	public GameView(PrintStream out, BufferedReader in){
-		this.out = out;
-		this.in = in;
-	}
+    private PrintStream out;
+    private BufferedReader in;
 
-	public void displayStartMessage() {
-		out.println("Welcome to the 21 sticks game!");
-	}
+    public GameView(PrintStream out, BufferedReader in) {
+        this.out = out;
+        this.in = in;
+    }
 
-	public String getInput() throws IOException {
-		return this.in.readLine();
-	}
-	public void displayQuitMessage(){
-		out.println("You are now quitting the game. Have a good day!");
-	}
+    public void displayStartMessage() {
+        out.println("Welcome to the 21 sticks game!");
+    }
 
-	public int getStickInput() throws NumberFormatException, IOException, NumberIsOutsideRangeException {
-		String input = in.readLine();
-		int parsedInt = Integer.parseInt(input);
-		if(parsedInt > 3){
-			throw new NumberIsOutsideRangeException();
-		} else if (parsedInt <= 0){
-			throw new NumberIsOutsideRangeException();
-		}
-		return Integer.parseInt(input);
-	}
+    public String getInput() throws IOException {
+        return this.in.readLine();
+    }
 
+    public void displayQuitMessage() {
+        out.println("You are now quitting the game. Have a good day!");
+    }
+
+    public int getStickInput() throws NumberFormatException, IOException, NumberIsOutsideRangeException {
+        String input = in.readLine();
+        int parsedInt = Integer.parseInt(input);
+        if (parsedInt > 3) {
+            throw new NumberIsOutsideRangeException();
+        } else if (parsedInt <= 0) {
+            throw new NumberIsOutsideRangeException();
+        }
+        return Integer.parseInt(input);
+    }
+
+    public void displayGameInstructions() {
+        out.println("The game is called 21 sticks. Your goal is to not take the last stick. You take a number of sticks, between 1 and 3, and the other player does the same. The player tha takes the last one loses.");
+    }
 }
