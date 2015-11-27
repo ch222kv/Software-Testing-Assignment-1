@@ -30,6 +30,8 @@ public class GameView {
 		String input = in.readLine();
 		if(Integer.parseInt(input) > 3){
 			throw new NumberIsOutsideRangeException();
+		} else if (input.equals("0")){
+			throw new NumberIsOutsideRangeException();
 		}
 		return Integer.parseInt(input);
 	}
