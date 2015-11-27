@@ -72,11 +72,12 @@ public class GameHandlerTest {
     }
 
     @Test
-    public void shouldThrowGameHasEnded() throws GameHasNotBegunException, IOException {
+    public void shouldThrowGameHasEnded() throws GameHasNotBegunException, IOException, NumberIsOutsideRangeException {
         game = new Game();
         sut = new GameHandler(view, game);
 
-        when(view.getInput()).thenReturn("y").thenReturn("9").thenReturn("9").thenReturn("2").thenReturn("Q");
+        when(view.getInput()).thenReturn("y").thenReturn("Q");
+        when(view.getStickInput()).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(3).thenReturn(2);
 
         try {
             sut.beginGame();
@@ -84,5 +85,11 @@ public class GameHandlerTest {
         } catch (GameHasEndedException e) {
 
         }
+    }
+    @Test
+    public void testPrintOutSticksLeft() throws GameHasNotBegunException, GameHasEndedException, IOException {
+        when(view.getInput()).thenReturn("y");
+        sut.beginGame();
+        verify(view).displaySticksLeft(anyInt());
     }
 }

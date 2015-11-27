@@ -43,6 +43,6 @@ public class GameView {
     }
 
     public void displayStartInstructions() {
-        out.println("To begin the game write 'y', and to quit write 'Q'");
+        out.print("To begin the game write 'y', and to quit write 'Q': ");
     }
 }
