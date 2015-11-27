@@ -20,10 +20,9 @@ public class GameHandler {
 		view.displayQuitMessage();
 	}
 	public void beginLoop() throws GameHasEndedException, GameHasNotBegunException, IOException {
-		String input;
+		String input = "";
 		do{
 
-			input = view.getInput();
 			try{
 				view.getStickInput();
 			} catch(NumberFormatException e){
@@ -31,6 +30,7 @@ public class GameHandler {
 			} catch (NumberIsOutsideRangeException e) {
 				continue;
 			}
+			input = view.getInput();
 			if(input.equals("R")){
 				game.resetGame();
 			} else {

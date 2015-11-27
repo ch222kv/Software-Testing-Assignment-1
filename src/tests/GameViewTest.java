@@ -86,4 +86,10 @@ public class GameViewTest {
 
         verify(out).print("Please write the number of sticks to take, between 1 and 3: ");
     }
+
+    @Test
+    public void testDispayStartInstructions(){
+        sut.displayStartInstructions();
+        verify(out).println("To begin the game write 'y', and to quit write 'Q'");
+    }
 }
