@@ -31,9 +31,7 @@ public class GameView {
 		int parsedInt = Integer.parseInt(input);
 		if(parsedInt > 3){
 			throw new NumberIsOutsideRangeException();
-		} else if (parsedInt == 0){
-			throw new NumberIsOutsideRangeException();
-		} else if (parsedInt < 0){
+		} else if (parsedInt <= 0){
 			throw new NumberIsOutsideRangeException();
 		}
 		return Integer.parseInt(input);
