@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6e8e59f-2970-4ef9-b561-21fdca5ce013" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/code/GameMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameHandler.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameView.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/code/GameView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameViewTest.class" afterPath="$PROJECT_DIR$/out/production/Software-Testing-Assignment-1/tests/GameViewTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/GameHandler.java" afterPath="$PROJECT_DIR$/src/code/GameHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tests/GameViewTest.java" afterPath="$PROJECT_DIR$/src/tests/GameViewTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/GameView.java" afterPath="$PROJECT_DIR$/src/code/GameView.java" />
     </list>
     <ignored path="Software-Testing-Assignment-1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,12 +29,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="GameView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-              <folding />
+            <state vertical-scroll-proportion="1.2179104">
+              <caret line="45" column="74" selection-start-line="45" selection-start-column="74" selection-end-line="45" selection-end-column="74" />
+              <folding>
+                <element signature="e#1419#1420#0" expanded="true" />
+                <element signature="e#1500#1501#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameViewTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameViewTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/GameViewTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7044776">
-              <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="92" column="80" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,11 +153,11 @@
         <option value="$PROJECT_DIR$/src/tests/GameTest.java" />
         <option value="$PROJECT_DIR$/src/code/InvalidInputException.java" />
         <option value="$PROJECT_DIR$/src/code/NumberIsOutsideRangeException.java" />
-        <option value="$PROJECT_DIR$/src/code/GameView.java" />
         <option value="$PROJECT_DIR$/src/code/GameMain.java" />
         <option value="$PROJECT_DIR$/src/code/GameHandler.java" />
         <option value="$PROJECT_DIR$/src/tests/GameHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/tests/GameViewTest.java" />
+        <option value="$PROJECT_DIR$/src/code/GameView.java" />
       </list>
     </option>
   </component>
@@ -751,7 +755,7 @@
       <option name="number" value="Default" />
       <updated>1448480427582</updated>
       <workItem from="1448480429717" duration="5137000" />
-      <workItem from="1448640209965" duration="2960000" />
+      <workItem from="1448640209965" duration="2992000" />
     </task>
     <task id="LOCAL-00001" summary="RED">
       <created>1448482315128</created>
@@ -921,13 +925,16 @@
       <option name="project" value="LOCAL" />
       <updated>1448642531111</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="RED">
+      <created>1448649078662</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1448649078662</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunAllTests - 2015.11.27 at 17h 38m 21s.xml">
-      <configuration name="RunAllTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RunAllTests - 2015.11.27 at 17h 38m 50s.xml">
       <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
@@ -955,9 +962,12 @@
     <history-entry file="RunAllTests - 2015.11.27 at 19h 28m 30s.xml">
       <configuration name="RunAllTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RunAllTests - 2015.11.27 at 19h 31m 42s.xml">
+      <configuration name="RunAllTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8097000" />
+    <option name="totallyTimeSpent" value="8129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
@@ -965,12 +975,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971245" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971245" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971245" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971245" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -999,10 +1009,10 @@
     <MESSAGE value="REFACTOR" />
     <MESSAGE value="Changed a test." />
     <MESSAGE value="REACTOR" />
-    <MESSAGE value="RED" />
     <MESSAGE value="GREEN" />
     <MESSAGE value="REFACTORED another test" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTORED another test" />
+    <MESSAGE value="RED" />
+    <option name="LAST_COMMIT_MESSAGE" value="RED" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1019,7 +1029,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,14 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/code/GameHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1190,10 +1195,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/GameViewTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7044776">
-          <caret line="91" column="11" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="80" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2179104">
+          <caret line="45" column="74" selection-start-line="45" selection-start-column="74" selection-end-line="45" selection-end-column="74" />
+          <folding>
+            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
           </folding>
         </state>
       </provider>

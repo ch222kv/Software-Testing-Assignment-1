@@ -41,4 +41,8 @@ public class GameView {
     public void displayGameInstructions() {
         out.println("The game is called 21 sticks. Your goal is to not take the last stick. You take a number of sticks, between 1 and 3, and the other player does the same. The player tha takes the last one loses.");
     }
+
+    public void displayStartInstructions() {
+        out.println("To begin the game write 'y', and to quit write 'Q'");
+    }
 }
